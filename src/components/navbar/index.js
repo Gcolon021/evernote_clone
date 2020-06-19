@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ReactLogo from "../../React-icon.svg";
 
@@ -17,7 +16,7 @@ import ShortCuts from "./BottomSection/ShortCuts";
 import Notebooks from "./BottomSection/Notebooks";
 import Tags from "./BottomSection/Tags";
 
-const drawerWidth = 42;
+const drawerWidth = 43;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,17 +36,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NavBar = () => {
+const NavBar = ({ open }) => {
   const classes = useStyles();
 
   return (
     <Drawer
       className={classes.drawer}
-      variant="permanent"
+      variant="persistent"
       classes={{
         paper: classes.drawerPaper,
       }}
       anchor="left"
+      open={open}
     >
       <div style={{ height: "58px" }}>
         <img src={ReactLogo} />
