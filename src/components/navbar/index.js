@@ -19,14 +19,8 @@ import Tags from "./BottomSection/Tags";
 const drawerWidth = 43;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
   drawerPaper: {
+    overflow: "hidden",
     width: drawerWidth,
     paddingLeft: 17,
     paddingTop: 12,
@@ -41,7 +35,6 @@ const NavBar = ({ open }) => {
 
   return (
     <Drawer
-      className={classes.drawer}
       variant="persistent"
       classes={{
         paper: classes.drawerPaper,
@@ -68,7 +61,7 @@ const NavBar = ({ open }) => {
           <Tags />
         </List>
       </div>
-    </Drawer>
+    </Drawer >
   );
 };
 

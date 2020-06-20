@@ -1,6 +1,6 @@
 import React from "react";
 import { SvgIcon } from "@material-ui/core";
-import { ReactComponent as SnipIcon } from "../.././resources/SnippingTool.svg";
+import { ReactComponent as SnipIcon } from "../../.././resources/SnippingTool.svg";
 
 const WebClipper = () => {
   return (
