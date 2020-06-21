@@ -12,7 +12,7 @@ const NoteCount = ({ children }) => {
             height: "24px",
             marginTop: "32px",
         }}>
-            <div style={{ fontSize: "13px", fontWeight: "400", color: "#ababab" }}>
+            <div style={{ boxSizing: "border-box", fontSize: "13px", fontWeight: "400", color: "#ababab", }}>
                 24 notes
               {children}
             </div>
