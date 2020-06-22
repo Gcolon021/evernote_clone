@@ -19,9 +19,6 @@ const useStyles = makeStyles((theme) => ({
       stroke: "#FFFFFF",
     },
   },
-  root: {
-    "&:hover": { backgroundColor: "transparent" },
-  },
 }));
 
 const TopNav = ({ children }) => {

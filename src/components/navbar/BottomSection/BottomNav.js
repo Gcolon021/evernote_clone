@@ -16,15 +16,12 @@ const useStyles = makeStyles((theme) => ({
       fill: "#FFFFFF",
     },
   },
-  root: {
-    "&:hover": { backgroundColor: "transparent" },
-  },
 }));
 
 const BottomNav = ({ children }) => {
   const classes = useStyles();
   return (
-    <NavBarIcons classesRoot={classes.root} classesDefault={classes.default}>
+    <NavBarIcons classesDefault={classes.default}>
       {children}
     </NavBarIcons>
   );

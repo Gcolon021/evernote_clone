@@ -1,18 +1,18 @@
 import React from 'react'
-import { NoteContainer, GeneralInfo, TextSnippet, DateCreated, NoteTitle } from "../../../styledComponents/NoteCard";
+import * as S from "../../../styledComponents/NoteCard";
 
 const Container = ({ title, date, text, selectedId, id }) => {
     const isSelected = selectedId === id;
     return (
-        <NoteContainer selected={isSelected} >
-            <GeneralInfo>
-                <NoteTitle>{title}</NoteTitle>
-                <DateCreated>{date}</DateCreated>
-                <TextSnippet>
+        <S.NoteContainer selected={isSelected} >
+            <S.GeneralInfo>
+                <S.NoteTitle>{title}</S.NoteTitle>
+                <S.DateCreated>{date}</S.DateCreated>
+                <S.TextSnippet>
                     {text}
-                </TextSnippet>
-            </GeneralInfo>
-        </NoteContainer>
+                </S.TextSnippet>
+            </S.GeneralInfo>
+        </S.NoteContainer>
     )
 }
 

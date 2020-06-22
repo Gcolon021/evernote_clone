@@ -1,6 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
+import * as S from "../../styledComponents/NavBar";
 import List from "@material-ui/core/List";
 import ReactLogo from "../../React-icon.svg";
 
@@ -18,50 +17,35 @@ import Tags from "./BottomSection/Tags";
 
 const drawerWidth = 43;
 
-const useStyles = makeStyles((theme) => ({
-  drawerPaper: {
-    overflow: "hidden",
-    width: drawerWidth,
-    paddingLeft: 17,
-    paddingTop: 12,
-    paddingRight: 12,
-    paddingBottom: 24,
-    background: "#f8f8f8",
-  },
-}));
-
 const NavBar = ({ open }) => {
-  const classes = useStyles();
 
   return (
-    <Drawer
+    <S.sDrawer
+      drawerWidth={drawerWidth}
       variant="persistent"
-      classes={{
-        paper: classes.drawerPaper,
-      }}
       anchor="left"
       open={open}
     >
-      <div style={{ height: "58px" }}>
+      <S.LogoWrapper>
         <img src={ReactLogo} />
-      </div>
-      <div style={{ marginBottom: "48px" }}>
+      </S.LogoWrapper>
+      <S.ButtonWrapper>
         <List>
           <AddNote />
           <NewMeetingNote />
           <SearchNoteBook />
           <Message />
         </List>
-      </div>
-      <div style={{ marginBottom: "48px" }}>
+      </S.ButtonWrapper>
+      <S.ButtonWrapper>
         <List>
           <ShortCuts />
           <Notes />
           <Notebooks />
           <Tags />
         </List>
-      </div>
-    </Drawer >
+      </S.ButtonWrapper>
+    </S.sDrawer>
   );
 };
 

@@ -1,25 +1,13 @@
 import React from "react";
-import HeaderTitle from "./HeaderTitle";
 import WebClipper from "./WebClipper";
+import * as S from "../../../styledComponents/Notes/Top/Header";
 
 const Header = () => {
   return (
-    <div
-      style={{
-        boxSizing: "border-box",
-        paddingLeft: "24px",
-        paddingTop: "24px",
-        paddingRight: "20px",
-        margin: "0",
-        textAlign: "left",
-        position: "relative",
-        width: "350px",
-        marginBottom: "-7px",
-      }}
-    >
-      <HeaderTitle />
+    <S.Header>
+      <S.HeaderTitle>NOTES</S.HeaderTitle>
       <WebClipper />
-    </div>
+    </S.Header>
   );
 };
 
