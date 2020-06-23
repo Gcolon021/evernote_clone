@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 import { Icon } from "@material-ui/core";
 
 export const NavBarIcon = styled(Icon)`
@@ -22,21 +22,31 @@ export const NavBarIcon = styled(Icon)`
         }
     }
 
-    /* &:hover .star_icon,
-    &:hover .notes_icon, 
-    &:hover .tags_icon, 
-    &:hover .notebook_icon {
-        fill: "#FFFFFF",
-    } */
 `;
 
-export const mListItem = styled(ListItem)`
+export const mListItemIcon = styled(ListItemIcon)`
+    background-color: transparent;
+
     &:hover {
         background-color: transparent;
+    }
+
+    &:hover {
         .MuiListItem-root {
+            background-color: transparent;
+        }
+    }
+
+    .MuiListItem-root {
             &:hover {
                 background-color: transparent;
             }
+        }
+
+    &:hover .MuiListItem-root {
+        background-color: transparent;
+        &:hover{
+            background-color: transparent;
         }
     }
 `;

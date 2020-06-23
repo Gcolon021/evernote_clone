@@ -1,14 +1,15 @@
 import React from "react";
 import * as S from "../../styledComponents/NavBar/NavBarIcons";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItem from "@material-ui/core/ListItem"
 
 const NavBarIcons = ({ children, section }) => {
   return (
-    <S.mListItem button disableGutters disableRipple>
-      <ListItemIcon>
+    <ListItem button disableGutters disableRipple>
+      <S.mListItemIcon>
         <S.NavBarIcon component={children} />
-      </ListItemIcon>
-    </S.mListItem>
+      </S.mListItemIcon>
+    </ListItem>
   );
 };
 
