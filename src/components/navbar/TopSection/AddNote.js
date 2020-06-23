@@ -1,9 +1,9 @@
 import React from "react";
-import TopNav from "./TopNav";
+import NavBarIcons from "../NavBarIcons";
 import { ReactComponent as CustomPlusIcon } from "../../../resources/PlusIconGreen.svg";
 
 const AddNote = () => {
-  return <TopNav>{CustomPlusIcon}</TopNav>;
+  return <NavBarIcons isTop={true}>{CustomPlusIcon}</NavBarIcons>;
 };
 
 export default AddNote;

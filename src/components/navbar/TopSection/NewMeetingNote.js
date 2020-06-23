@@ -1,9 +1,9 @@
 import React from "react";
-import TopNav from "./TopNav";
+import NavBarIcons from "../NavBarIcons";
 import { ReactComponent as CustomIcon } from "../../../resources/AddMeetingIcon.svg";
 
 const NewMeetingNote = () => {
-  return <TopNav>{CustomIcon}</TopNav>;
+  return <NavBarIcons isTop={true}>{CustomIcon}</NavBarIcons>;
 };
 
 export default NewMeetingNote;

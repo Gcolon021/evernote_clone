@@ -1,9 +1,9 @@
 import React from "react";
-import TopNav from "./TopNav";
+import NavBarIcons from "../NavBarIcons";
 import { ReactComponent as CustomPlusIcon } from "../../../resources/SearchIcon.svg";
 
 const SearchNoteBook = () => {
-  return <TopNav>{CustomPlusIcon}</TopNav>;
+  return <NavBarIcons isTop={true}>{CustomPlusIcon}</NavBarIcons>;
 };
 
 export default SearchNoteBook;
