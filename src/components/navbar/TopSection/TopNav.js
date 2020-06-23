@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const TopNav = ({ children }) => {
   const classes = useStyles();
   return (
-    <NavBarIcons classesRoot={classes.root} classesDefault={classes.default}>
+    <NavBarIcons>
       {children}
     </NavBarIcons>
   );
