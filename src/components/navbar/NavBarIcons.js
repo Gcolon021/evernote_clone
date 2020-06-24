@@ -15,7 +15,7 @@ const NavBarIcons = ({ children, isTop }) => {
   return (
     <ListItem button disableGutters disableRipple className={classes.root}>
       <ListItemIcon>
-        <S.NavBarIcon component={children} isTop={isTop} />
+        <S.NavBarIcon component={children} istop={isTop} />
       </ListItemIcon>
     </ListItem>
   );

@@ -15,13 +15,11 @@ import ShortCuts from "./BottomSection/ShortCuts";
 import Notebooks from "./BottomSection/Notebooks";
 import Tags from "./BottomSection/Tags";
 
-const drawerWidth = 43;
-
-const NavBar = ({ open }) => {
+const NavBar = ({ open, drawerwidth }) => {
 
   return (
     <S.sDrawer
-      drawerWidth={drawerWidth}
+      drawerwidth={drawerwidth}
       variant="persistent"
       anchor="left"
       open={open}

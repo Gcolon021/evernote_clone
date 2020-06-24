@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 350px;
-    margin-left: ${ props => props.drawerOpen ? props.drawerWidth : 0}px;
-    transform: ${ props => props.drawerOpen ? "" : "translateX(-350px)"};
+    margin-left: ${props => props.drawerWidth}px;
 `;
 
 export const Top = styled.div`

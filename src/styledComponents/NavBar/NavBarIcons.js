@@ -6,9 +6,9 @@ export const NavBarIcon = styled(Icon)`
         width: 36px;
         height: 36px;
     }
-    background: ${ props => props.isTop ? "#FFFFFF" : "#f8f8f8"};
+    background: ${ props => props.istop ? "#FFFFFF" : "#f8f8f8"};
     border-radius: 50%;
-    border: ${props => props.isTop ? "1px solid #E5E5E5" : "1px solid #f8f8f8"};
+    border: ${props => props.istop ? "1px solid #E5E5E5" : "1px solid #f8f8f8"};
     
     
     &:hover {

@@ -7,7 +7,7 @@ const WebClipper = () => {
     <S.Container>
       <S.Button>
         <S.IconWrapper>
-          <S.Icon component={SnipIcon} />
+          <S.Icon component={SnipIcon} viewBox="0 0 30 30" />
         </S.IconWrapper>
         <S.Title>Web Clipper</S.Title>
       </S.Button>

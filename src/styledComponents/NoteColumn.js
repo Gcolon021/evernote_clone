@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const NotesColumn = styled.div`
-    height: 662px;
+    max-height: calc(100vh - 106px);
     width: 350px;
-    margin-left: ${ props => props.drawerWidth}px;
-    overflow: hidden scroll;
+    overflow-y: scroll;
+`;
+
+export const NotesColumnContainer = styled.div`
+    margin-left: ${props => props.drawerwidth}px;
 `;

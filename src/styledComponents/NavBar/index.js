@@ -4,12 +4,13 @@ import Drawer from "@material-ui/core/Drawer";
 export const sDrawer = styled(Drawer)`
     & .MuiDrawer-paper {
         overflow: hidden;
-        width: 43px;
+        width: ${props => props.drawerwidth}px;
         padding: 17px;
         padding-top: 12px;
         padding-right: 12px;
         padding-bottom: 24px;
         background: #f8f8f8;
+        box-sizing: border-box;
     }
 `;
 
