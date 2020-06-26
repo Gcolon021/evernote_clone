@@ -4,14 +4,14 @@ import Options from "./Options";
 import NoteCount from "./NoteCount";
 import * as S from "../../../styledComponents/Notes/Top/Top"
 
-const Index = () => {
+const Index = ({ noteCount }) => {
     return (
         <S.Container>
             <S.Top>
                 <Header />
             </S.Top>
             <S.Bottom>
-                <NoteCount><Options /></NoteCount>
+                <NoteCount count={noteCount} ><Options /></NoteCount>
             </S.Bottom>
         </S.Container>
     )

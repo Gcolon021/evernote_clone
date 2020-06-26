@@ -1,12 +1,11 @@
 import React from 'react'
 import * as S from "../../../styledComponents/Notes/Top/NoteCount";
 
-const NoteCount = ({ children }) => {
+const NoteCount = ({ count, children }) => {
     return (
         <S.Container>
             <S.NoteCount>
-                24 notes
-              {children}
+                {count} notes {children}
             </S.NoteCount>
         </S.Container>
     )

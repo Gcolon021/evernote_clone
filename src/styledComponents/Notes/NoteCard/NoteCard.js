@@ -13,6 +13,10 @@ export const NoteContainer = styled.div`
     padding: 3px;
     border: ${ props => props.selected ? "3px solid #d9d9d9" : "3px solid #FFFFFF"};
     cursor: pointer;
+    &:hover {
+        background-color: #2dbe60;
+        border: 3px solid #2dbe60;
+    }
 `;
 
 export const GeneralInfo = styled.div`
@@ -23,7 +27,7 @@ export const GeneralInfo = styled.div`
     bottom: 15px;
     overflow: hidden;
     word-wrap: break-word;
-    color: #878787;
+    color: ${props => props.hover ? "#FFFFFF" : "#878787"};
     max-height: 93px;
     box-sizing: border-box;
 `;
@@ -52,11 +56,10 @@ export const DateCreated = styled.div`
 `;
 
 export const NoteTitle = styled.div`
-    transition: color 0.1s ease-in-out, width 0s ease-in-out 0.1s;
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    color: #4a4a4a;
+    color: ${ props => props.hover ? "#FFFFFF" : "#4a4a4a"};
     max-height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -74,4 +77,9 @@ export const NoteDivider = styled.div`
     transform: translateY(-1px);
     z-index: 12;
     position: absolute;
+`;
+
+export const NoteCardWrapper = styled.div`
+    position: relative;
+    box-sizing: border-box;
 `;

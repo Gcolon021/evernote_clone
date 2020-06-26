@@ -24,7 +24,7 @@ function App() {
       since I would like to add a nice transform with a ease time.
       */}
       {expandView ? <NotesColumnContainer drawerwidth={drawerwidth} open={expandView}>
-        <NotesColumnHeader />
+        <NotesColumnHeader noteCount={tempData.length} />
         <NotesColumn drawerwidth={drawerwidth}>
           {tempData.map((note, index) => {
             return <NoteCard key={index} id={index} setSelected={setSelectedNote} selectedId={selectedNote} title={note.title} date={note.dateCreated} text={note.text} />
@@ -39,7 +39,7 @@ function App() {
         borderLeft: "1px solid #ececec",
         position: "relative"
       }}>
-
+        <div> Header </div>
       </div>
     </div >
   );
