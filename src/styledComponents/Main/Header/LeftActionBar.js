@@ -122,12 +122,9 @@ export const LeftButtonContainer = styled.div`
     position: relative;
     padding-top: 2px;
     padding-left: 18px;
-    /*will need to be changed to 1 in final refactor*/
-    /* opacity: .1;  */
-    /* background-color: #000; */
     transition: opacity 0.2s ease-in-out;
     /* remove in final refactor */
-    width: 218px;
+    /* width: 218px; */
     min-height: 26px;
     float: left;
 `;
