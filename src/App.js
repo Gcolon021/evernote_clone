@@ -4,6 +4,7 @@ import NotesColumnHeader from "./components/Notes/Top";
 import NoteCard from "./components/Notes/Card"
 import { NotesColumn, NotesColumnContainer } from "./styledComponents/NoteColumn";
 import tempData from "./tempData"
+import MainHeader from "./components/Main/Header";
 
 const drawerwidth = 73;
 
@@ -31,15 +32,18 @@ function App() {
           })}
         </NotesColumn>
       </NotesColumnContainer> : null}
+
+      {/* Main Content Div Starts Here. */}
       <div style={{
-        backgroundColor: "#dadada",
+        backgroundColor: "#fff",
         width: "100%",
         height: "100vh",
         overflow: "hidden",
         borderLeft: "1px solid #ececec",
         position: "relative"
       }}>
-        <div> Header </div>
+        <MainHeader />
+        body
       </div>
     </div >
   );

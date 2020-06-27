@@ -21,8 +21,7 @@ export default function useHover() {
                 };
             }
         },
-        [ref.current] // Recall only if ref changes
-    );
+        []);
 
     return [ref, value];
 }
