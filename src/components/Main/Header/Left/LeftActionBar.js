@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Main/Header/LeftActionBar";
+import * as S from "../../../../styledComponents/Main/Header/Left/LeftActionBar";
 
 const LeftActionBar = () => {
     return (

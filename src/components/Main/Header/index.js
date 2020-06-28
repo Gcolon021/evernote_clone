@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from "../../../styledComponents/Main/Header";
-import LeftActionBar from "./LeftActionBar";
-import RightActionBar from "./RightActionBar";
+import LeftActionBar from "./Left/LeftActionBar";
+import RightActionBar from "./Right/RightActionBar";
 
 const index = () => {
     return (

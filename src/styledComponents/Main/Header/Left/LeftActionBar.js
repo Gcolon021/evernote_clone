@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import ReminderIcon from "../../../components/Notes/Card/actions/Reminder";
-import DeleteIcon from "../../../components/Notes/Card/actions/Delete";
-import ShortcutIcon from "../../../components/Notes/Card/actions/Shortcut";
-import InfoIcon from "../../../components/Notes/Card/actions/Info";
-import MoreIcon from "../../../components/Notes/Card/actions/More"
+import ReminderIcon from "../../../../components/Notes/Card/actions/Reminder";
+import DeleteIcon from "../../../../components/Notes/Card/actions/Delete";
+import ShortcutIcon from "../../../../components/Notes/Card/actions/Shortcut";
+import InfoIcon from "../../../../components/Notes/Card/actions/Info";
+import MoreIcon from "../../../../components/Notes/Card/actions/More"
 
 export const Info = styled(InfoIcon)`
     && {
