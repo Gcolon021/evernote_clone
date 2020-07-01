@@ -1,11 +1,17 @@
 import styled from "styled-components"
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
+export const ArrowDropDown = styled(ArrowDropDownIcon)`
+    color: #c4c4c4;
+    position: relative;
+    padding-top: 3px;
+`;
 
 export const DropDownContainer = styled.div`
     height: 100%;
     box-sizing: border-box;
-    vertical-align: top;
     display: inline-block;
-    border: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
 `;
 
 export const Span = styled.span`
@@ -16,6 +22,7 @@ export const Span = styled.span`
     height: 100%;
     display: inline-block;
     box-sizing: border-box;
+    font-size: 13px;
 `;
 
 export const ShareContainer = styled.div`
