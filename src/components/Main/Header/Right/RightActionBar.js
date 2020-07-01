@@ -4,14 +4,14 @@ import { ReactComponent as isSharedIcon } from "../../../../resources/isSharedIc
 import Share from "./Share";
 import Expand from "./Expand";
 
-const RightActionBar = () => {
+const RightActionBar = ({isExpanded, setExpandView}) => {
     return (
         <S.RightActionBar>
             <S.LeftSideMargin />
             <S.Shared component={isSharedIcon} viewBox="0 0 95.353 95.353" />
             <S.Upgrade>Upgrade</S.Upgrade>
             <Share />
-            <Expand />
+            <Expand isExpanded={isExpanded} setExpandView={setExpandView} />
         </S.RightActionBar>
     )
 }

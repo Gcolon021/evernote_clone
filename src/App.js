@@ -42,7 +42,7 @@ function App() {
         borderLeft: "1px solid #ececec",
         position: "relative"
       }}>
-        <MainHeader />
+        <MainHeader isExpanded={expandView} setExpandView={setExpandView}/>
         body
       </div>
     </div >

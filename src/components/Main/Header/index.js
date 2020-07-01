@@ -3,12 +3,12 @@ import * as S from "../../../styledComponents/Main/Header";
 import LeftActionBar from "./Left/LeftActionBar";
 import RightActionBar from "./Right/RightActionBar";
 
-const index = () => {
+const index = ({ isExpanded,setExpandView }) => {
     return (
         <S.Wrapper>
             <S.Container>
                 <LeftActionBar />
-                <RightActionBar />
+                <RightActionBar isExpanded={isExpanded} setExpandView={setExpandView}/>
             </S.Container>
         </S.Wrapper>
     )
