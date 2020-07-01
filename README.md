@@ -1,8 +1,11 @@
 ## Goal
 
-Using [M.E.R.N.](https://blog.cloudboost.io/mean-and-mern-stacks-eb4cee991390) (MongoDB, Express.js, React.js, Node.js) stack get as close to an [Evernote](https://evernote.com/) clone as I can in 1 Day.
+Using [M.E.R.N.](https://blog.cloudboost.io/mean-and-mern-stacks-eb4cee991390) (MongoDB, Express.js, React.js, Node.js) stack to build a [Evernote](https://evernote.com/) clone.
 
 ## Libraries
+
+ * Styled-Components
+ * Redux
 
 ## Create React App
 
