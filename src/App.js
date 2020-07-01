@@ -4,7 +4,7 @@ import NotesColumnHeader from "./components/Notes/Top";
 import NoteCard from "./components/Notes/Card"
 import { NotesColumn, NotesColumnContainer } from "./styledComponents/NoteColumn";
 import tempData from "./tempData"
-import MainHeader from "./components/Main/Header";
+import Main from "./components/Main";
 
 const drawerwidth = 73;
 
@@ -18,12 +18,6 @@ function App() {
       flexDirection: "row",
     }}>
       <NavBar open={expandView} drawerwidth={drawerwidth} />
-
-      {/* 
-      translateX(-423px) wasn't working as intended because the 
-      other section wasnt expanding to fill the screen. Maybe come back to it later.
-      since I would like to add a nice transform with a ease time.
-      */}
       {expandView ? <NotesColumnContainer drawerwidth={drawerwidth} open={expandView}>
         <NotesColumnHeader noteCount={tempData.length} />
         <NotesColumn drawerwidth={drawerwidth}>
@@ -32,19 +26,9 @@ function App() {
           })}
         </NotesColumn>
       </NotesColumnContainer> : null}
-
-      {/* Main Content Div Starts Here. */}
-      <div style={{
-        backgroundColor: "#fff",
-        width: "100%",
-        height: "100vh",
-        overflow: "hidden",
-        borderLeft: "1px solid #ececec",
-        position: "relative"
-      }}>
-        <MainHeader isExpanded={expandView} setExpandView={setExpandView}/>
+      <Main isExpanded={expandView} setExpandView={setExpandView}>
         body
-      </div>
+      </Main>
     </div >
   );
 }

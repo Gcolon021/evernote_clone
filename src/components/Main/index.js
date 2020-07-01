@@ -1,19 +1,17 @@
 // This is the main body component
 import React from 'react'
+import * as S from "../../styledComponents/Main/Main";
+import Header from "./Header"
+import DraftRichTextEditor from "./DraftRichTextEditor";
 
-const index = () => {
+const index = ({ expandView, setExpandView, children }) => {
     return (
-        <div>
-            
-        </div>
+        <S.MainContainer>
+            <Header isExpanded={expandView} setExpandView={setExpandView} />
+            <DraftRichTextEditor />
+            {children}
+        </S.MainContainer>
     )
 }
 
 export default index
-
-// backgroundColor: "#fff",
-// width: "100%",
-// height: "100vh",
-// overflow: "hidden",
-// borderLeft: "1px solid #ececec",
-// position: "relative"

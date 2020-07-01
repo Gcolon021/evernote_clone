@@ -18,11 +18,12 @@ export const Span = styled.span`
     color: #606060;
     font-weight: 400;
     padding: 7px 15px 0;
-    vertical-align: top;
     height: 100%;
     display: inline-block;
     box-sizing: border-box;
     font-size: 13px;
+    vertical-align: top;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 `;
 
 export const ShareContainer = styled.div`
