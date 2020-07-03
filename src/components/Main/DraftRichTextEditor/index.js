@@ -8,10 +8,10 @@ const Index = () => {
     const editorText = useSelector(state => state.textEditor);
 
     return (
-        <div>
+        <React.Fragment>
            <DraftHeader />
            <Body editorState={editorText}/>
-        </div>
+        </React.Fragment>
     )
 }
 
