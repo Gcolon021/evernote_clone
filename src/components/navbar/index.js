@@ -25,7 +25,7 @@ const NavBar = ({ open, drawerwidth }) => {
       open={open}
     >
       <S.LogoWrapper>
-        <img src={ReactLogo} />
+        <img src={ReactLogo} alt={{}} />
       </S.LogoWrapper>
       <S.ButtonWrapper>
         <List>
