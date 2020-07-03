@@ -5,7 +5,7 @@ const DraftHeader = () => {
     return (
         <S.Wrapper>
             <S.Container>
-                Hello world
+                Draft Header
             </S.Container>
         </S.Wrapper>
     )
