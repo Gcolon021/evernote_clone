@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "../../styledComponents/NavBar";
 import List from "@material-ui/core/List";
-import ReactLogo from "../../React-icon.svg";
+import ReactLogo from "../../resources/React-icon.svg";
 
 // Top Section
 import AddNote from "./TopSection/AddNote";
