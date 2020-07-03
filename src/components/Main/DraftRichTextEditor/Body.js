@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from "../../../styledComponents/Main/DraftRichTextEditor/Body";
+import TextEditor from "./TextEditor";
 
 const Body = () => {
     return (
@@ -12,7 +13,7 @@ const Body = () => {
                  </S.Title>
              </S.TitleContainer>
          </S.TitleWrapper>
-             Herro world
+            <TextEditor />
          </S.Container>
         </S.Wrapper>
     )
