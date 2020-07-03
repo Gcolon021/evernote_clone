@@ -40,8 +40,6 @@ export const Container = styled.div`
     vertical-align: baseline;
     font: inherit;
     color: #000;
-    opacity: .5;
-    background-color: #ff0000;
 `;
 
 export const Wrapper = styled.div`

@@ -26,7 +26,7 @@ function App() {
           })}
         </NotesColumn>
       </NotesColumnContainer> : null}
-      <Main isExpanded={expandView} setExpandView={setExpandView}>
+        <Main isExpanded={expandView} setExpandView={setExpandView}>
       </Main>
     </div >
   );

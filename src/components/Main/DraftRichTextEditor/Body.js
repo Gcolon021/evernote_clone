@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from "../../../styledComponents/Main/DraftRichTextEditor/Body";
 import TextEditor from "./TextEditor";
 
-const Body = () => {
+const Body = ({editorState}) => {
     return (
         <S.Wrapper>
          <S.Container>
@@ -13,7 +13,7 @@ const Body = () => {
                  </S.Title>
              </S.TitleContainer>
          </S.TitleWrapper>
-            <TextEditor />
+            <TextEditor editorText={editorState}/>
          </S.Container>
         </S.Wrapper>
     )
