@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as SnipIcon } from "../../.././resources/SnippingTool.svg";
-import * as S from "../../../styledComponents/Notes/Top/WebClipper";
+import * as S from "../../../../styledComponents/Notes/NoteCard/Top/WebClipper";
 
 const WebClipper = () => {
   return (

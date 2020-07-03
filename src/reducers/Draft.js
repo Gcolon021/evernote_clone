@@ -1,5 +1,3 @@
-import {EditorState} from "draft-js";
-
 const defaultState = {
     editorState: null,
 };
