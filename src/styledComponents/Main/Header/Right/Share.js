@@ -17,7 +17,7 @@ export const DropDownContainer = styled.div`
 export const Span = styled.span`
     color: #606060;
     font-weight: 400;
-    padding: 7px 15px 0;
+    padding: 4px 15px 0;
     height: 100%;
     display: inline-block;
     box-sizing: border-box;
