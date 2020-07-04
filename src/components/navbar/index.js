@@ -1,19 +1,19 @@
 import React from "react";
-import * as S from "../../styledComponents/NavBar";
+import * as S from "src/styledComponents/navBar";
 import List from "@material-ui/core/List";
-import ReactLogo from "../../React-icon.svg";
+import ReactLogo from "src/resources/React-icon.svg";
 
 // Top Section
-import AddNote from "./TopSection/AddNote";
-import NewMeetingNote from "./TopSection/NewMeetingNote";
-import SearchNoteBook from "./TopSection/SearchNoteBook";
-import Message from "./TopSection/Message";
+import AddNote from "./Top/AddNote";
+import NewMeetingNote from "./Top/NewMeetingNote";
+import SearchNoteBook from "./Top/SearchNoteBook";
+import Message from "./Top/Message";
 
 // Bottom Section
-import Notes from "./BottomSection/Notes";
-import ShortCuts from "./BottomSection/ShortCuts";
-import Notebooks from "./BottomSection/Notebooks";
-import Tags from "./BottomSection/Tags";
+import Notes from "./Bottom/Notes";
+import ShortCuts from "./Bottom/ShortCuts";
+import Notebooks from "./Bottom/Notebooks";
+import Tags from "./Bottom/Tags";
 
 const NavBar = ({ open, drawerwidth }) => {
 
@@ -25,7 +25,7 @@ const NavBar = ({ open, drawerwidth }) => {
       open={open}
     >
       <S.LogoWrapper>
-        <img src={ReactLogo} />
+        <img src={ReactLogo} alt={{}} />
       </S.LogoWrapper>
       <S.ButtonWrapper>
         <List>

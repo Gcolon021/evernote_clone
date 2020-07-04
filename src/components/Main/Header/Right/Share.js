@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../../../../styledComponents/Main/Header/Right/Share";
+import * as S from "src/styledComponents/main/header/right/Share";
 const Share = () => {
     return (
         <S.ShareWrapper>

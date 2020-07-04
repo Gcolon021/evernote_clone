@@ -1,8 +1,8 @@
 // This is the main body component
 import React from 'react'
-import * as S from "../../styledComponents/Main/Main";
-import Header from "./Header"
-import DraftRichTextEditor from "./DraftRichTextEditor";
+import * as S from "src/styledComponents/main/Main";
+import Header from "./header"
+import DraftRichTextEditor from "./draftRichTextEditor";
 
 const index = ({ expandView, setExpandView, children }) => {
     return (

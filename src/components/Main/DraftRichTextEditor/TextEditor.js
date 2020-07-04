@@ -1,9 +1,9 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Main/DraftRichTextEditor/TextEditor";
+import * as S from "src/styledComponents/main/draftRichTextEditor/TextEditor";
 import {Editor, EditorState, RichUtils, convertToRaw, convertFromRaw} from "draft-js";
 import 'draft-js/dist/Draft.css';
 import { useDispatch } from "react-redux";
-import { updateNote } from "../../../actions/Notes";
+import { updateNote } from "src/actions/Notes";
 
 const TextEditor = ({ editorText }) => {
     const dispatch = useDispatch();

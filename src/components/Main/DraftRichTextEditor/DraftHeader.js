@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Main/DraftRichTextEditor/DraftHeader";
+import * as S from "src/styledComponents/main/draftRichTextEditor/DraftHeader";
 
 const DraftHeader = () => {
     return (

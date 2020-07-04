@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as ReminderIcon } from "../../../../resources/NoteCardMenuBar/ClockIcon.svg";
+import { ReactComponent as ReminderIcon } from "src/resources/noteCardMenuBar/ClockIcon.svg";
 import { SvgIcon } from '@material-ui/core';
 
 const Reminder = ({ className, viewBox }) => {
