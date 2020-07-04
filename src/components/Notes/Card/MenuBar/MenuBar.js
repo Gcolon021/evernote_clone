@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../../../../styledComponents/noteCard/MenuBar";
+import * as S from "src/styledComponents/noteCard/MenuBar";
 import MenuBarIcon from "./MenuBarIcon";
 
 const MenuBar = () => {
