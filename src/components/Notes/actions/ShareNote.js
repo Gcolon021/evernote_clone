@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as ShareNoteIcon } from "../../../../resources/NoteCardMenuBar/MessageIcon.svg";
+import { ReactComponent as ShareNoteIcon } from "src/resources/noteCardMenuBar/MessageIcon.svg";
 import { SvgIcon } from "@material-ui/core";
 
 const ShareNote = ({ className, viewBox }) => {

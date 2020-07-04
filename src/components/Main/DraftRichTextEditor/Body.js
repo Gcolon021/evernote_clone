@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Main/DraftRichTextEditor/Body";
+import * as S from "src/styledComponents/main/draftRichTextEditor/Body";
 import TextEditor from "./TextEditor";
 
 const Body = ({editorState}) => {

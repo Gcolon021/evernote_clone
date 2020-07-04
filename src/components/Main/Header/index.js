@@ -1,7 +1,7 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Main/Header";
-import LeftActionBar from "./Left/LeftActionBar";
-import RightActionBar from "./Right/RightActionBar";
+import * as S from "src/styledComponents/main/header";
+import LeftActionBar from "./left/LeftActionBar";
+import RightActionBar from "./right/RightActionBar";
 
 const index = ({ isExpanded,setExpandView }) => {
     return (

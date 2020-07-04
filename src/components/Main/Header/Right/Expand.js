@@ -1,6 +1,6 @@
 import React from 'react'
-import * as S from "../../../../styledComponents/Main/Header/Right/Expand";
-import { ReactComponent as ExpandIcon } from "../../../../resources/Expand.svg";
+import * as S from "src/styledComponents/main/header/right/Expand";
+import { ReactComponent as ExpandIcon } from "src/resources/Expand.svg";
 
 const Expand = ({ isExpanded, setExpandView }) => {
     

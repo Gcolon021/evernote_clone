@@ -1,7 +1,7 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Notes/NoteCard/NoteCard";
-import MenuBar from "./MenuBar/MenuBar";
-import useHover from "../../../hooks/useHover";
+import * as S from "src/styledComponents/noteCard/NoteCard";
+import MenuBar from "./menuBar/MenuBar";
+import useHover from "src/hooks/useHover";
 
 const Container = ({ title, date, text, selectedId, setSelected, id }) => {
     const [hoverRef, isHovered] = useHover();

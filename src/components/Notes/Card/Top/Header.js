@@ -1,6 +1,6 @@
 import React from "react";
 import WebClipper from "./WebClipper";
-import * as S from "../../../../styledComponents/Notes/NoteCard/Top/Header";
+import * as S from "src/styledComponents/noteCard/top/Header";
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as ShortcutIcon } from "../../../../resources/NoteCardMenuBar/Star.svg";
+import { ReactComponent as ShortcutIcon } from "src/resources/noteCardMenuBar/Star.svg";
 import { SvgIcon } from "@material-ui/core";
 
 const Shortcut = ({ className, viewBox }) => {

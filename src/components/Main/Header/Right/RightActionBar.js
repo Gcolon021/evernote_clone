@@ -1,6 +1,6 @@
 import React from 'react'
-import * as S from "../../../../styledComponents/Main/Header/Right/RightActionBar";
-import { ReactComponent as isSharedIcon } from "../../../../resources/isSharedIcon.svg";
+import * as S from "src/styledComponents/main/header/right/RightActionBar";
+import { ReactComponent as isSharedIcon } from "src/resources/isSharedIcon.svg";
 import Share from "./Share";
 import Expand from "./Expand";
 

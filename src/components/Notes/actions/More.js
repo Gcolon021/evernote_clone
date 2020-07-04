@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as HorizontalMore } from "../../../../resources/NoteCardMenuBar/TripleDotHorizontal.svg";
+import { ReactComponent as HorizontalMore } from "src/resources/noteCardMenuBar/TripleDotHorizontal.svg";
 import { SvgIcon } from '@material-ui/core';
 
 const More = ({ className, viewBox }) => {

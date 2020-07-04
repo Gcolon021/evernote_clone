@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "components/*": ["./components/*"],
+            "actions/*": ["./actions/*"],
+            "hooks/*": ["./hooks/*"],
+            "styledComponents/*": ["./styledComponents/*"],
+            "resources/*": ["./resources/*"],
+            "reducers/*": ["./reducers/*"],
+            "noteAction/*":["./components/notes/actions/*"]
+        }
+    },
+    "include": ["src"]
+}

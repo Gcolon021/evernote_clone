@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as DeleteIcon } from "../../../../resources/NoteCardMenuBar/Trash.svg";
+import { ReactComponent as DeleteIcon } from "src/resources/noteCardMenuBar/Trash.svg";
 import { SvgIcon } from '@material-ui/core';
 
 const Delete = ({ className, viewBox }) => {

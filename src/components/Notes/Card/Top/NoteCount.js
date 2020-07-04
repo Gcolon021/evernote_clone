@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../../../styledComponents/Notes/Top/NoteCount";
+import * as S from "src/styledComponents/noteCard/top/NoteCount";
 
 const NoteCount = ({ count, children }) => {
     return (

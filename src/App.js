@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "./components/navbar";
-import NotesColumnHeader from "./components/Notes/Top";
-import NoteCard from "./components/Notes/Card"
-import { NotesColumn, NotesColumnContainer } from "./styledComponents/NoteColumn";
-import tempData from "./tempData"
-import Main from "./components/Main";
+import NavBar from "src/components/navbar";
+import NotesColumnHeader from "src/components/notes/card/top";
+import NoteCard from "src/components/notes/card";
+import { NotesColumn, NotesColumnContainer } from "src/styledComponents/NoteColumn";
+import tempData from "src/tempData";
+import Main from "src/components/main";
 
 const drawerwidth = 73;
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import ReminderIcon from "../../components/Notes/actions/Reminder";
-import DeleteIcon from "../../components/Notes/actions/Delete";
-import ShareNoteIcon from "../../components/Notes/actions/ShareNote";
-import ShortcutIcon from "../../components/Notes/actions/Shortcut";
+import ReminderIcon from "src/components/notes/actions/Reminder";
+import DeleteIcon from "src/components/notes/actions/Delete";
+import ShareNoteIcon from "src/components/notes/actions/ShareNote";
+import ShortcutIcon from "src/components/notes/actions/Shortcut";
 
 export const Shortcut = styled(ShortcutIcon)`
     && {
