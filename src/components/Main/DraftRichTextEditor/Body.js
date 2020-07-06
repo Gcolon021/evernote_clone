@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from "src/styledComponents/main/draftRichTextEditor/Body";
 import TextEditor from "./TextEditor";
 
-const Body = ({editorState}) => {
+const Body = ({ editorState }) => {
     return (
         <S.Wrapper>
          <S.Container>

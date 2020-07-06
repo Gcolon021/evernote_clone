@@ -5,7 +5,16 @@ import {connect, useSelector} from "react-redux";
 
 const Index = () => {
 
-    const editorText = useSelector(state => state.textEditor);
+    const editorText = useSelector(state => { 
+        let selectedNoteCard = state.books.selectedNoteBook.selectedNoteCard;
+        if( selectedNoteCard == null){
+            return null;
+        } else {
+            return selectedNoteCard.text;
+        }
+    });
+
+    console.log(editorText);
 
     return (
         <React.Fragment>

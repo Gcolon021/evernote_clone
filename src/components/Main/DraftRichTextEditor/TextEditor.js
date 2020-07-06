@@ -9,7 +9,7 @@ const TextEditor = ({ editorText }) => {
     const dispatch = useDispatch();
     const [editorState, setEditorState] = React.useState(() =>
     {
-        if(editorText.editorState !== null){
+        if(editorText !== null){
             return EditorState.createWithContent(convertFromRaw(JSON.parse(editorText.editorState)))
         } else {
             return EditorState.createEmpty()
