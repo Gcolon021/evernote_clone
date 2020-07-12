@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { draftReducer } from "./Draft";
+import { noteReducer } from "./Note";
 
 export default combineReducers({
-    books: draftReducer,
+    books: noteReducer,
 });

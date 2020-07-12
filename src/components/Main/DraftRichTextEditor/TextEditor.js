@@ -5,12 +5,12 @@ import 'draft-js/dist/Draft.css';
 import { useDispatch } from "react-redux";
 import { updateNote } from "src/actions/Notes";
 
-const TextEditor = ({ editorText }) => {
+const TextEditor = ({ editorText = null }) => {
     const dispatch = useDispatch();
     const [editorState, setEditorState] = React.useState(() =>
     {
         if(editorText !== null){
-            return EditorState.createWithContent(convertFromRaw(JSON.parse(editorText.editorState)))
+            return EditorState.createWithContent(convertFromRaw(JSON.parse(editorText.notes.text)));
         } else {
             return EditorState.createEmpty()
         }
@@ -34,7 +34,7 @@ const TextEditor = ({ editorText }) => {
     
     const handleOnChange = (editorContent) => {
         setEditorState(editorContent);
-        dispatch(updateNote(1, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))))
+        // dispatch(updateNote(0, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))))
     }
 
     return (

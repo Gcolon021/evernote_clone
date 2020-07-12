@@ -3,12 +3,13 @@ import * as S from "src/styledComponents/noteCard/NoteCard";
 import MenuBar from "./menuBar/MenuBar";
 import useHover from "src/hooks/useHover";
 
-const Container = ({ title, dateModified, text, selectedId, setSelected, id }) => {
+const Container = ({ note, selectedId, setSelected, id }) => {
+    const {title, dateModified, text} = note;
     const [hoverRef, isHovered] = useHover();
     const [date, setDate] = React.useState("");
     const isSelected = selectedId === id;
     const maxTextCount = 200;
-    const truncText = text != null ? text.substring(0, maxTextCount) + "..." : "";
+    const truncText = text.blocks[0].text != null ? text.blocks[0].text.substring(0, maxTextCount) + "..." : "";
 
     React.useEffect(() => {
         setDate(convertUnixTimeStampToDate(dateModified));
@@ -16,7 +17,7 @@ const Container = ({ title, dateModified, text, selectedId, setSelected, id }) =
 
     return (
         <S.NoteCardWrapper
-            onClick={() => setSelected(id)}
+            onClick={() => setSelected(0, id, note)}
             ref={hoverRef}
         >
             {id === 0 || (id - selectedId) === 1 || (id === selectedId) ? null : <S.NoteDivider />}
