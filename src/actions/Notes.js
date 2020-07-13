@@ -11,13 +11,12 @@ export const updateNote = (bookID, noteID, text) => {
     }
 }
 
-export const setSelectedNoteCard = ( bookID, noteID, note ) => {
+export const setSelectedNoteCard = ( bookID, noteIndex ) => {
     return {
         type: CONSTANTS.SET_SELECTED_NOTECARD,
         payload: {
             bookID,
-            noteID,
-            note
+            noteIndex
         }
     }
 }

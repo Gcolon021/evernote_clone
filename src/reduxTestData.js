@@ -2,9 +2,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const initState = {
     selectedNoteBook: {
-        id: null,
-        selectedNoteID: null,
-        selectedNote: null,
+        bookID: null,
+        selectedNoteIndex: null,
     },
     notebooks: [{
         id: `book-${uuidv4()}`,

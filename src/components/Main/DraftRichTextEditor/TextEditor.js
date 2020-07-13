@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from "src/styledComponents/main/draftRichTextEditor/TextEditor";
 import {Editor, EditorState, RichUtils, convertToRaw, convertFromRaw} from "draft-js";
 import 'draft-js/dist/Draft.css';
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { updateNote } from "src/actions/Notes";
 
 const TextEditor = ({ editorText = null }) => {
@@ -16,7 +16,10 @@ const TextEditor = ({ editorText = null }) => {
         }
     })
     const editorRef = React.useRef();
-
+    const state = useSelector(state => {
+        const selectedVals = state.selectedNoteBook;
+        state.notebooks
+    });
 
     const focus = () => {
         editorRef.current.focus();
@@ -28,13 +31,12 @@ const TextEditor = ({ editorText = null }) => {
             handleOnChange(newState)
             return 'handled';
         }
-
         return 'not-handled';
     }
     
     const handleOnChange = (editorContent) => {
         setEditorState(editorContent);
-        // dispatch(updateNote(0, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))))
+        dispatch(updateNote(0, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))))
     }
 
     return (

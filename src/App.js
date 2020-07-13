@@ -14,8 +14,8 @@ function App() {
   const [expandView, setExpandView] = React.useState(true);
   const books = useSelector(state => state.books);
 
-  const handleSelectedNote = ( bookID, noteID, note ) => {
-    dispatch(setSelectedNoteCard(books.notebooks[0].id, noteID, note));
+  const handleSelectedNote = ( bookID, noteIndex) => {
+    dispatch(setSelectedNoteCard(bookID, noteIndex));
   }
 
   return (
@@ -28,11 +28,12 @@ function App() {
         <NotesColumnHeader noteCount={books.notebooks[0].notes.length} />
         <NotesColumn drawerwidth={drawerwidth}>
           {books.notebooks[0].notes.map((note, index) => {
+            console.log(index)
             if(books.selectedNoteBook.selectedNote === 0){
-              handleSelectedNote(books.notebooks[0].id, note.id, );
+              handleSelectedNote(books.notebooks[0].id, index);
             }
 
-            return <NoteCard key={index} id={note.id} setSelected={handleSelectedNote} selectedId={books.selectedNoteBook.selectedNoteID} note={note} />
+            return <NoteCard key={index} index={index} setSelected={handleSelectedNote} selectedIndex={books.selectedNoteBook.selectedNoteIndex} note={note} />
           })}
         </NotesColumn>
       </NotesColumnContainer> : null}
