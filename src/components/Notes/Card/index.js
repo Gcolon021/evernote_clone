@@ -2,14 +2,17 @@ import React from 'react'
 import * as S from "src/styledComponents/noteCard/NoteCard";
 import MenuBar from "./menuBar/MenuBar";
 import useHover from "src/hooks/useHover";
+import { setSelectedNoteCard } from "src/actions/Notes";
+import { useDispatch } from "react-redux";
 
-const Container = ({ note, selectedIndex, setSelected, index }) => {
+const Container = ({bookIndex, note, selectedIndex, index }) => {
+    const dispatch = useDispatch();
     const {title, dateModified, text} = note;
     const [hoverRef, isHovered] = useHover();
     const [date, setDate] = React.useState("");
     const isSelected = selectedIndex === index;
     const maxTextCount = 200;
-    const truncText = text.blocks[0].text != null ? text.blocks[0].text.substring(0, maxTextCount) + "..." : "";
+    // const truncText = text.blocks[0].text != null ? text.blocks[0].text.substring(0, maxTextCount) + "..." : "";
 
     React.useEffect(() => {
         setDate(convertUnixTimeStampToDate(dateModified));
@@ -17,7 +20,7 @@ const Container = ({ note, selectedIndex, setSelected, index }) => {
 
     return (
         <S.NoteCardWrapper
-            onClick={() => setSelected(0, index)}
+            onClick={() => dispatch(setSelectedNoteCard(bookIndex, index, note))}
             ref={hoverRef}
         >
             {index === 0 || (index - selectedIndex) === 1 || (index === selectedIndex) || isHovered ? null : <S.NoteDivider />}
@@ -27,7 +30,7 @@ const Container = ({ note, selectedIndex, setSelected, index }) => {
                     <S.NoteTitle hover={isHovered}>{title}</S.NoteTitle>
                     <S.DateCreated>{date}</S.DateCreated>
                     <S.TextSnippet>
-                        {truncText}
+                        {/* {truncText} */}
                     </S.TextSnippet>
                 </S.GeneralInfo>
             </S.NoteContainer>

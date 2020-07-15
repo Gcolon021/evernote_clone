@@ -5,22 +5,21 @@ import 'draft-js/dist/Draft.css';
 import { useSelector, useDispatch } from "react-redux";
 import { updateNote } from "src/actions/Notes";
 
-const TextEditor = ({ editorText = null }) => {
+const TextEditor = () => {
     const dispatch = useDispatch();
-    const [editorState, setEditorState] = React.useState(() =>
-    {
-        if(editorText !== null){
-            return EditorState.createWithContent(convertFromRaw(JSON.parse(editorText.notes.text)));
-        } else {
-            return EditorState.createEmpty()
-        }
-    })
-    const editorRef = React.useRef();
-    const state = useSelector(state => {
-        const selectedVals = state.selectedNoteBook;
-        state.notebooks
-    });
+    const selectedNoteInfo = useSelector(state => state.books.selectedNoteInfo);
+    const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
 
+    React.useEffect(() => {
+        if(selectedNoteInfo.selectedNote !== null){
+            var newEditorState = EditorState.createWithContent(convertFromRaw(JSON.parse(selectedNoteInfo.selectedNote.text))); 
+            
+            setEditorState(newEditorState);
+        }
+    }, [selectedNoteInfo]);
+
+    const editorRef = React.useRef();
+    
     const focus = () => {
         editorRef.current.focus();
     }
@@ -35,8 +34,7 @@ const TextEditor = ({ editorText = null }) => {
     }
     
     const handleOnChange = (editorContent) => {
-        setEditorState(editorContent);
-        dispatch(updateNote(0, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))))
+        dispatch(updateNote(selectedNoteInfo.bookIndex, selectedNoteInfo.selectedNoteIndex, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))));
     }
 
     return (

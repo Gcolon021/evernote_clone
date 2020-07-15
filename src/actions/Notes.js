@@ -1,22 +1,23 @@
 import {CONSTANTS} from "./index";
 
-export const updateNote = (bookID, noteID, text) => {
+export const updateNote = (bookIndex, noteIndex, text) => {
     return {
         type: CONSTANTS.UPDATE_NOTE_TEXT,
         payload: {
-            bookID,
-            noteID,
+            bookIndex,
+            noteIndex,
             text
         }
     }
 }
 
-export const setSelectedNoteCard = ( bookID, noteIndex ) => {
+export const setSelectedNoteCard = ( bookIndex, noteIndex, note) => {
     return {
         type: CONSTANTS.SET_SELECTED_NOTECARD,
         payload: {
-            bookID,
-            noteIndex
+            bookIndex,
+            noteIndex,
+            note
         }
     }
 }

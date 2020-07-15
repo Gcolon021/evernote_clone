@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export const initState = {
-    selectedNoteBook: {
-        bookID: null,
+    selectedNoteInfo: {
+        bookIndex: null,
         selectedNoteIndex: null,
+        selectedNote: null,
     },
     notebooks: [{
         id: `book-${uuidv4()}`,
@@ -13,22 +14,7 @@ export const initState = {
         notes: [{
             id: `note-${uuidv4()}`,
             title: "Test Note 1",
-            text: {
-                blocks:[{
-                    key:"4dcbg",
-                    text:"This is just test data and will be changed as the default data at a later date.",
-                    type:"unstyled",
-                    depth:0,
-                    inlineStyleRanges:[{
-                        offset:35,
-                        length:10,
-                        style:"BOLD"
-                    }],
-                    entityRanges:[],
-                    data:{}
-                }],
-                entityMap:{}
-                },
+            text: '{"blocks":[{"key":"2f39e","text":"This is temp data and will be changed as soon as this section is complete","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":22,"length":24,"style":"BOLD"}],"entityRanges":[],"data":{}}],"entityMap":{}}',
             dateCreated: Date.now(),
             dateLastModified: null,
             favorite: null,
@@ -47,22 +33,7 @@ export const initState = {
         {
             id: `note-${uuidv4()}`,
             title: "Test Note 2",
-            text: {
-                blocks:[{
-                    key:"4dcbg",
-                    text:"This is just test data and will be changed as the default data at a later date.",
-                    type:"unstyled",
-                    depth:0,
-                    inlineStyleRanges:[{
-                        offset:35,
-                        length:10,
-                        style:"BOLD"
-                    }],
-                    entityRanges:[],
-                    data:{}
-                }],
-                entityMap:{}
-                },
+            text: '{"blocks":[{"key":"2f39e","text":"This is temp data and will be changed as soon as this section is complete note 2","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":22,"length":24,"style":"BOLD"}],"entityRanges":[],"data":{}}],"entityMap":{}}',
             dateCreated: Date.now(),
             dateLastModified: null,
             favorite: null,
