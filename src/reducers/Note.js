@@ -5,8 +5,6 @@ import { CONSTANTS } from "src/actions";
 export const noteReducer = (state = initState, { payload, type }) => {
     if(type === CONSTANTS.UPDATE_NOTE_TEXT){
       return produce(state, draftState => {
-        console.log(draftState.selectedNoteInfo.selectedNote.text = payload.text)
-        draftState.selectedNoteInfo.selectedNote.text = payload.text;
         draftState.notebooks[payload.bookIndex].notes[payload.noteIndex].text = payload.text;
       });
     } else if( type === CONSTANTS.SET_SELECTED_NOTECARD){

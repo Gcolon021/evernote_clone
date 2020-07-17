@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import * as S from "src/styledComponents/main/draftRichTextEditor/TextEditor";
 import {Editor, EditorState, RichUtils, convertToRaw, convertFromRaw} from "draft-js";
 import 'draft-js/dist/Draft.css';
@@ -12,14 +12,15 @@ const TextEditor = () => {
 
     React.useEffect(() => {
         if(selectedNoteInfo.selectedNote !== null){
-            var newEditorState = EditorState.createWithContent(convertFromRaw(JSON.parse(selectedNoteInfo.selectedNote.text))); 
-            
+            /* 
+                This is utilized to update the currently selected note when a new one is selected.
+            */
+            const newEditorState = EditorState.createWithContent(convertFromRaw(JSON.parse(selectedNoteInfo.selectedNote.text)));
             setEditorState(newEditorState);
         }
     }, [selectedNoteInfo]);
 
     const editorRef = React.useRef();
-    
     const focus = () => {
         editorRef.current.focus();
     }
@@ -34,11 +35,12 @@ const TextEditor = () => {
     }
     
     const handleOnChange = (editorContent) => {
+        setEditorState(editorContent)
         dispatch(updateNote(selectedNoteInfo.bookIndex, selectedNoteInfo.selectedNoteIndex, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))));
     }
 
     return (
-        <S.Wrapper onClick={focus}>
+        <S.Wrapper onClick={() => {}} onMouseDown={focus}>
             <Editor
             ref={editorRef}
             placeholder="Drag files here or just start typing..."

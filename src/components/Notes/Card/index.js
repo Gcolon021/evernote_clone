@@ -4,15 +4,17 @@ import MenuBar from "./menuBar/MenuBar";
 import useHover from "src/hooks/useHover";
 import { setSelectedNoteCard } from "src/actions/Notes";
 import { useDispatch } from "react-redux";
+import {EditorState, convertFromRaw} from "draft-js";
 
 const Container = ({bookIndex, note, selectedIndex, index }) => {
     const dispatch = useDispatch();
-    const {title, dateModified, text} = note;
+    const {title, dateModified} = note;
     const [hoverRef, isHovered] = useHover();
     const [date, setDate] = React.useState("");
     const isSelected = selectedIndex === index;
-    const maxTextCount = 200;
-    // const truncText = text.blocks[0].text != null ? text.blocks[0].text.substring(0, maxTextCount) + "..." : "";
+    const MAX_TEXT_COUNT = 200;
+    const text = EditorState.createWithContent(convertFromRaw(JSON.parse(note.text))).getCurrentContent().getPlainText();
+    const truncText = text != null ? text.substring(0, MAX_TEXT_COUNT) + "..." : "";
 
     React.useEffect(() => {
         setDate(convertUnixTimeStampToDate(dateModified));
@@ -30,7 +32,7 @@ const Container = ({bookIndex, note, selectedIndex, index }) => {
                     <S.NoteTitle hover={isHovered}>{title}</S.NoteTitle>
                     <S.DateCreated>{date}</S.DateCreated>
                     <S.TextSnippet>
-                        {/* {truncText} */}
+                        {truncText}
                     </S.TextSnippet>
                 </S.GeneralInfo>
             </S.NoteContainer>
