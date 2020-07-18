@@ -14,7 +14,7 @@ const Container = ({bookIndex, note, selectedIndex, index }) => {
     const isSelected = selectedIndex === index;
     const MAX_TEXT_COUNT = 200;
     const text = EditorState.createWithContent(convertFromRaw(JSON.parse(note.text))).getCurrentContent().getPlainText();
-    const truncText = text != null ? text.substring(0, MAX_TEXT_COUNT) + "..." : "";
+    const truncText = text != null ? text.substring(0, MAX_TEXT_COUNT).trim() + "..." : "";
 
     React.useEffect(() => {
         setDate(convertUnixTimeStampToDate(dateModified));

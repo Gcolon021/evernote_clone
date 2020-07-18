@@ -33,6 +33,8 @@ export const GeneralInfo = styled.div`
 `;
 
 export const TextSnippet = styled.div`
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
