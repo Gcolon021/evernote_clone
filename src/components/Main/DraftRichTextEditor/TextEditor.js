@@ -7,7 +7,7 @@ import { updateNote } from "src/actions/Notes";
 
 const TextEditor = () => {
     const dispatch = useDispatch();
-    const selectedNoteInfo = useSelector(state => state.books.selectedNoteInfo);
+    const selectedNoteInfo = useSelector(state => state.selected);
     const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
 
     React.useEffect(() => {
@@ -28,15 +28,15 @@ const TextEditor = () => {
     const handleKeyCommand = (command) => {
         const newState = RichUtils.handleKeyCommand(editorState, command);
         if(newState){
-            handleOnChange(newState)
+            handleOnChange(newState);
             return 'handled';
         }
         return 'not-handled';
     }
     
     const handleOnChange = (editorContent) => {
-        setEditorState(editorContent)
-        dispatch(updateNote(selectedNoteInfo.bookIndex, selectedNoteInfo.selectedNoteIndex, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))));
+        setEditorState(editorContent);
+        dispatch(updateNote(selectedNoteInfo.noteID, JSON.stringify(convertToRaw(editorContent.getCurrentContent()))));
     }
 
     return (

@@ -10,7 +10,9 @@ const drawerwidth = 73;
 
 function App() {
   const [expandView, setExpandView] = React.useState(true);
-  const books = useSelector(state => state.books);
+  // const books = useSelector(state => state.books);
+  const notes = useSelector(state => state.notes);
+  const selected = useSelector(state => state.selected);
 
   return (
     <div style={{
@@ -19,10 +21,10 @@ function App() {
     }}>
       <NavBar open={expandView} drawerwidth={drawerwidth} />
       {expandView ? <NotesColumnContainer drawerwidth={drawerwidth} open={expandView}>
-        <NotesColumnHeader noteCount={books.notebooks[0].notes.length} />
+        <NotesColumnHeader noteCount={notes.length} />
         <NotesColumn drawerwidth={drawerwidth}>
-          {books.notebooks[0].notes.map((note, index) => {
-            return <NoteCard key={index} bookIndex={0} index={index} selectedIndex={books.selectedNoteInfo.selectedNoteIndex} note={note} />
+          {Object.entries(notes).map((note, key) => {
+            return <NoteCard key={key} index={key} bookIndex={0} selectedNoteID={selected.noteID} note={note[1]} />
           })}
         </NotesColumn>
       </NotesColumnContainer> : null}

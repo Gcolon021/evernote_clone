@@ -2,16 +2,16 @@ import React from 'react'
 import * as S from "src/styledComponents/noteCard/NoteCard";
 import MenuBar from "./menuBar/MenuBar";
 import useHover from "src/hooks/useHover";
-import { setSelectedNoteCard } from "src/actions/Notes";
+import { setSelectedNoteCard } from "src/actions/Selected";
 import { useDispatch } from "react-redux";
 import {EditorState, convertFromRaw} from "draft-js";
 
-const Container = ({bookIndex, note, selectedIndex, index }) => {
+const Container = ({bookID, note, selectedNoteID, index }) => {
     const dispatch = useDispatch();
-    const {title, dateModified} = note;
+    const {title, dateModified, id} = note;
     const [hoverRef, isHovered] = useHover();
     const [date, setDate] = React.useState("");
-    const isSelected = selectedIndex === index;
+    const isSelected = selectedNoteID === note.id;
     const MAX_TEXT_COUNT = 200;
     const text = EditorState.createWithContent(convertFromRaw(JSON.parse(note.text))).getCurrentContent().getPlainText();
     const truncText = text != null ? text.substring(0, MAX_TEXT_COUNT).trim() + "..." : "";
@@ -22,10 +22,10 @@ const Container = ({bookIndex, note, selectedIndex, index }) => {
 
     return (
         <S.NoteCardWrapper
-            onClick={() => dispatch(setSelectedNoteCard(bookIndex, index, note))}
+            onClick={() => dispatch(setSelectedNoteCard(bookID, id, note))}
             ref={hoverRef}
         >
-            {index === 0 || (index - selectedIndex) === 1 || (index === selectedIndex) || isHovered ? null : <S.NoteDivider />}
+            {index === 0 || (note.id === selectedNoteID) || isHovered ? null : <S.NoteDivider />}
             <S.NoteContainer selected={isSelected} >
                 <MenuBar />
                 <S.GeneralInfo hover={isHovered}>
