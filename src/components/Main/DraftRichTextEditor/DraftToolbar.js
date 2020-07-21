@@ -31,7 +31,7 @@ const DraftToolBar = ({ editorState, handleOnChange, styles }) => {
         className='font-size-option'
         onMouseDown={e => setFontSize(e, `${fontSize}px`)}
       >{fontSize}</div>
-    ))
+    ));
 
     const onUnderlineClick = () => {
         const newEditorState = RichUtils.toggleInlineStyle(editorState, 'UNDERLINE');

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from "src/styledComponents/main/draftRichTextEditor/TextEditor";
-import {Editor, EditorState, RichUtils, } from "draft-js";
+import {Editor, RichUtils, } from "draft-js";
 import 'draft-js/dist/Draft.css';
 
 const TextEditor = ({ editorRef, editorState, setEditorState, handleOnChange }) => {
