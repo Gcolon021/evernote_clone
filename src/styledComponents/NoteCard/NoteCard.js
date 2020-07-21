@@ -69,6 +69,8 @@ export const NoteTitle = styled.div`
     line-height: 20px;
     margin-bottom: 2px;
     padding-bottom: 2px;
+    resize: none;
+    white-space: nowrap;
 `;
 
 export const NoteDivider = styled.div`

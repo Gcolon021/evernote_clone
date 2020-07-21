@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "src/styledComponents/noteCard/top/Options";
+import * as S from "src/styledComponents/NoteCard/Top/Options";
 
 const Options = () => {
     return (

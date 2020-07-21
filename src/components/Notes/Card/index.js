@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "src/styledComponents/noteCard/NoteCard";
+import * as S from "src/styledComponents/NoteCard/NoteCard";
 import MenuBar from "./menuBar/MenuBar";
 import useHover from "src/hooks/useHover";
 import { setSelectedNoteCard } from "src/actions/Selected";
@@ -27,9 +27,9 @@ const Container = ({bookID, note, selectedNoteID, index }) => {
         >
             {index === 0 || (note.id === selectedNoteID) || isHovered ? null : <S.NoteDivider />}
             <S.NoteContainer selected={isSelected} >
-                <MenuBar />
+                { isHovered ? <MenuBar /> : null}
                 <S.GeneralInfo hover={isHovered}>
-                    <S.NoteTitle hover={isHovered}>{title}</S.NoteTitle>
+                    <S.NoteTitle hover={isHovered}>{isHovered ? title.substring(0,20) + "...": title}</S.NoteTitle>
                     <S.DateCreated>{date}</S.DateCreated>
                     <S.TextSnippet>
                         {truncText}

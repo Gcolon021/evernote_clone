@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "src/components/navbar";
-import NotesColumnHeader from "src/components/notes/card/top";
+import NotesColumnHeader from "src/components/notes/card/Top";
 import NoteCard from "src/components/notes/card";
 import { NotesColumn, NotesColumnContainer } from "src/styledComponents/NoteColumn";
 import Main from "src/components/main";
@@ -21,7 +21,7 @@ function App() {
     }}>
       <NavBar open={expandView} drawerwidth={drawerwidth} />
       {expandView ? <NotesColumnContainer drawerwidth={drawerwidth} open={expandView}>
-        <NotesColumnHeader noteCount={notes.length} />
+        <NotesColumnHeader noteCount={Object.keys(notes).length} />
         <NotesColumn drawerwidth={drawerwidth}>
           {Object.entries(notes).map((note, key) => {
             return <NoteCard key={key} index={key} bookIndex={0} selectedNoteID={selected.noteID} note={note[1]} />

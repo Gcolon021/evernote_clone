@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Title = styled.div`
+export const Title = styled.textarea`
     width: 100%;
     border: none;
     outline: none;
@@ -13,7 +13,9 @@ export const Title = styled.div`
     top: 0;
     left: 0;
     margin-top: -1;
+    word-wrap: break-word;
     text-overflow: ellipsis;
+    overflow-wrap: break-word;
     overflow: hidden;
     white-space: nowrap;
     color: #2dbe60;

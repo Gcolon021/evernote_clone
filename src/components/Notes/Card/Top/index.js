@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "./Header";
 import Options from "./Options";
 import NoteCount from "./NoteCount";
-import * as S from "src/styledComponents/noteCard/top/Top";
+import * as S from "src/styledComponents/NoteCard/Top/Top";
 
 const Index = ({ noteCount }) => {
     return (

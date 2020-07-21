@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "src/styledComponents/noteCard/MenuBar";
+import * as S from "src/styledComponents/NoteCard/MenuBar";
 import MenuBarIcon from "./MenuBarIcon";
 
 const MenuBar = () => {
@@ -17,7 +17,7 @@ const MenuBar = () => {
             <MenuBarIcon>
                 <S.Delete viewBox="-25 0 488.529 438.529" />
             </MenuBarIcon>
-        </S.Container >
+        </S.Container>
     )
 }
 

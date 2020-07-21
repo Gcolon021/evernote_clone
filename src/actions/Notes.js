@@ -9,3 +9,13 @@ export const updateNote = (noteID, text) => {
         }
     }
 }
+
+export const updateNoteTitle = (noteID, title) => {
+    return {
+        type: CONSTANTS.UPDATE_NOTE_TITLE,
+        payload: {
+            noteID,
+            title
+        }
+    }
+}
