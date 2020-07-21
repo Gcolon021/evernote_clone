@@ -4,16 +4,15 @@ import Body from "./Body";
 import { useSelector, useDispatch} from "react-redux";
 import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
 import { updateNote } from "src/actions/Notes";
+import createStyles from "draft-js-custom-styles";
 
 const Index = () => {
     const dispatch = useDispatch();
     const selectedNoteInfo = useSelector(state => state.selected);
     const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
 
-    const editorRef = React.useRef();
-    const focus = () => {
-        editorRef.current.focus();
-    }
+    const customStylesToManage = (["font-size"]);
+    const { styles, customStyleFn, exporter } = createStyles(customStylesToManage, "CUSTOM_");
 
     React.useEffect(() => {
         if(selectedNoteInfo.selectedNote !== null){
@@ -33,9 +32,19 @@ const Index = () => {
     return (
         <React.Fragment>
         { selectedNoteInfo.noteID === null ? null :
-            <div onMouseDown={focus}>
-                <DraftToolBar editorState={editorState} handleOnChange={handleOnChange}/>
-                <Body note={selectedNoteInfo.selectedNote} editorRef={editorRef} setEditorState={setEditorState} editorState={editorState} handleOnChange={handleOnChange}/>
+            <div>
+                <DraftToolBar 
+                editorState={editorState} 
+                handleOnChange={handleOnChange} 
+                styles={styles}
+                />
+                <Body
+                note={selectedNoteInfo.selectedNote}
+                setEditorState={setEditorState} 
+                editorState={editorState} 
+                handleOnChange={handleOnChange} 
+                customStyleFn={customStyleFn}
+                />
             </div>
         }
         </React.Fragment>

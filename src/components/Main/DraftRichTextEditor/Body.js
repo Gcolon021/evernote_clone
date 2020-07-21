@@ -4,7 +4,7 @@ import TextEditor from "./TextEditor";
 import { useDispatch } from "react-redux";
 import { updateNoteTitle } from '../../../actions/Notes';
 
-const Body = ({ note, editorRef, setEditorState, editorState, handleOnChange }) => {
+const Body = ({ note, setEditorState, editorState, handleOnChange, customStyleFn }) => {
     const { title, id } = note;
     const [titleVal, setTitleVal] = React.useState(title);
     const dispatch = useDispatch();
@@ -29,7 +29,12 @@ const Body = ({ note, editorRef, setEditorState, editorState, handleOnChange }) 
                  />
              </S.TitleContainer>
          </S.TitleWrapper>
-            <TextEditor editorRef={editorRef} setEditorState={setEditorState} editorState={editorState} handleOnChange={handleOnChange}/>
+            <TextEditor
+            setEditorState={setEditorState} 
+            editorState={editorState} 
+            handleOnChange={handleOnChange}
+            customStyleFn={customStyleFn}    
+            />
          </S.Container>
         </S.Wrapper>
     )

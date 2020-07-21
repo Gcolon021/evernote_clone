@@ -3,7 +3,7 @@ import * as S from "src/styledComponents/main/draftRichTextEditor/TextEditor";
 import {Editor, RichUtils, } from "draft-js";
 import 'draft-js/dist/Draft.css';
 
-const TextEditor = ({ editorRef, editorState, setEditorState, handleOnChange }) => {
+const TextEditor = ({ editorState, customStyleFn, handleOnChange }) => {
     
     const handleKeyCommand = (command) => {
         const newState = RichUtils.handleKeyCommand(editorState, command);
@@ -17,12 +17,13 @@ const TextEditor = ({ editorRef, editorState, setEditorState, handleOnChange }) 
     return ( 
         <S.Wrapper >
             <Editor
-            ref={editorRef}
             placeholder="Drag files here or just start typing..."
             spellCheck={true}
             handleKeyCommand={handleKeyCommand}
             editorState={editorState}
-            onChange={handleOnChange} />
+            onChange={handleOnChange}
+            customStyleFn={customStyleFn}
+            />
         </S.Wrapper>
     )
 }
