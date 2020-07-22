@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from "src/styledComponents/main/draftRichTextEditor/DraftHeader";
-import { RichUtils } from "draft-js"
-import FontSizeMenu from "./FontSizeMenu"
+import { RichUtils } from "draft-js";
+import FontSizeMenu from "./FontSizeMenu";
 
 export const BLOCK_TYPES = [
   { label: " “ ” ", style: "blockquote" },
@@ -29,10 +29,14 @@ const DraftToolBar = ({ editorState, handleOnChange, styles }) => {
 
     return (
         <S.Wrapper>
-            <S.Container>           
-            <button onMouseDown={e => e.preventDefault()} onClick={onUnderlineClick}>U</button>
-            <button onClick={onBoldClick}><b>B</b></button>
-            <button onClick={onItalicClick}><i>I</i></button>
+            <S.Container>
+            <S.ItemCon>
+              <S.Divider />
+              <FontSizeMenu handleOnChange={handleOnChange} editorState={editorState} styles={styles} />
+            </S.ItemCon>
+              <S.CustomButton onMouseDown={e => e.preventDefault()} onClick={onUnderlineClick} />
+              <S.CustomButton onClick={onBoldClick}><b>B</b></S.CustomButton>
+              <S.CustomButton onClick={onItalicClick}><i>I</i></S.CustomButton>
             </S.Container>
         </S.Wrapper>
     )
