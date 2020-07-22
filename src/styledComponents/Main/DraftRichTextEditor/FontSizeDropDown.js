@@ -2,21 +2,15 @@ import styled from "styled-components";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export const ExpandMore = styled(ExpandMoreIcon)`
+    cursor: pointer;
     && {
         width: .5em;
         height: .5em;
     }
 `;
 
-export const CustomButton = styled.div`
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    transition: background 0.2s ease-in-out;
-    vertical-align: top;
-`;
-
 export const DropDownMenu = styled.div`
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -30,6 +24,7 @@ export const DropDownMenu = styled.div`
 `;
 
 export const MenuItemValue = styled.div`
+
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
@@ -47,10 +42,11 @@ export const MenuItemValue = styled.div`
 `;
 
 export const MenuItemCheck = styled.div`
-
+    cursor: pointer;
 `;
 
 export const MenuItemBtn = styled.div`
+
     height: 32px;
     overflow: hidden;
     position: relative;
@@ -71,8 +67,10 @@ export const DropDownBtn = styled.div`
     font-size: 12px;
     font-weight: 400;
     line-height: 17px;
+    cursor: pointer;
 `;
 
 export const Container = styled.div`
     z-index: 10;
+    cursor: pointer;
 `;

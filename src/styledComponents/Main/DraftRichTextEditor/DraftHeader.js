@@ -31,15 +31,3 @@ export const Wrapper = styled.div`
     font: inherit;
     vertical-align: baseline;
 `;
-
-export const CustomButton = styled.div`
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    transition: background 0.2s ease-in-out;
-    vertical-align: top;
-    height: 17px;
-    width: 13px;
-    overflow: hidden;
-    background-size: 13px 17px;
-`;

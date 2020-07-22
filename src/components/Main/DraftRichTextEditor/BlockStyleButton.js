@@ -1,28 +1,22 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import * as S from "src/styledComponents/main/draftRichTextEditor/BlockStyleButton";
 
-const BlockStyleButton = ( props ) => {
-    const onToggle = (e) => {
-        e.preventDefault();
-        props.onToggle(props.style);
-    }
+const BlockStyleButton = ({ onClick, image}) => {
+    const [toggle, setToggle] = React.useState(false);
 
-    let className = "RichEditor-styleButton";
-    if(this.props.active) {
-        className += " RichEditor-activeButton";
+    const onToggle = () => {
+        setToggle(toggle => !toggle);
+        onClick();
     }
 
     return (
-        <span className={className} onClick={onToggle}>
-            {props.label}
-        </span>
+        <S.CustomButton
+            toggle={toggle}
+            onMouseDown={e => e.preventDefault()}
+            onClick={onToggle}
+            style={{backgroundImage:`url(${image})`}}
+        />
     )
-}
-
-BlockStyleButton.propTypes = {
-    label: PropTypes.string,
-    style: PropTypes.string,
-    onToggle: PropTypes.func,
 }
 
 export default BlockStyleButton
