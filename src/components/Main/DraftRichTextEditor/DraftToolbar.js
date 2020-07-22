@@ -7,28 +7,12 @@ import Underline from "src/resources/TextEditor/underline.png";
 import Bold from "src/resources/TextEditor/bold.png";
 import Italics from "src/resources/TextEditor/italic.png"
 import Strike from "src/resources/TextEditor/strikethrough.png";
-
-export const BLOCK_TYPES = [
-  { label: " “ ” ", style: "blockquote" },
-	{ label: "UL", style: "unordered-list-item" },
-	{ label: "OL", style: "ordered-list-item" },
-  { label: "{ }", style: "code-block" }
-];
+import 'draft-js/dist/Draft.css'
 
 const DraftToolBar = ({ editorState, handleOnChange, styles }) => {
 
-    const onUnderlineClick = () => {
-        const newEditorState = RichUtils.toggleInlineStyle(editorState, 'UNDERLINE');
-        handleOnChange(newEditorState);  
-    }
-    
-    const onBoldClick = () => {
-      const newEditorState = RichUtils.toggleInlineStyle(editorState, 'BOLD');
-      handleOnChange(newEditorState);
-    }
-    
-    const onItalicClick = () => {
-      const newEditorState = RichUtils.toggleInlineStyle(editorState, 'ITALIC');
+    const handleInLineStyle = (type) => {
+      const newEditorState = RichUtils.toggleInlineStyle(editorState, type);
       handleOnChange(newEditorState);
     }
 
@@ -40,10 +24,10 @@ const DraftToolBar = ({ editorState, handleOnChange, styles }) => {
               <FontSizeMenu handleOnChange={handleOnChange} editorState={editorState} styles={styles} />
             </S.ItemCon>
               <S.Divider />
-              <BlockStyleButton image={Bold} onClick={onBoldClick} />
-              <BlockStyleButton image={Italics} onclick={onItalicClick} />
-              <BlockStyleButton image={Underline} onClick={onUnderlineClick} />
-              <BlockStyleButton image={Strike} onClick={onUnderlineClick} />
+                <BlockStyleButton image={Bold} onClick={() => handleInLineStyle('BOLD')} />
+                <BlockStyleButton image={Italics} onClick={() => handleInLineStyle('ITALIC')} />
+                <BlockStyleButton image={Underline} onClick={() => handleInLineStyle('UNDERLINE')} />
+                <BlockStyleButton image={Strike} onClick={() => handleInLineStyle('STRIKETHROUGH')} />
               <S.Divider />
             </S.Container>
         </S.Wrapper>

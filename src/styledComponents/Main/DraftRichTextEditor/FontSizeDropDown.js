@@ -24,7 +24,6 @@ export const DropDownMenu = styled.div`
 `;
 
 export const MenuItemValue = styled.div`
-
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
@@ -46,7 +45,6 @@ export const MenuItemCheck = styled.div`
 `;
 
 export const MenuItemBtn = styled.div`
-
     height: 32px;
     overflow: hidden;
     position: relative;
