@@ -1,5 +1,5 @@
 import React from 'react'
-import DraftToolBar from "./DraftToolbar";
+import DraftToolBar from "./Toolbar/DraftToolbar";
 import Body from "./Body";
 import { useSelector, useDispatch} from "react-redux";
 import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
@@ -11,7 +11,9 @@ const Index = () => {
     const selectedNoteInfo = useSelector(state => state.selected);
     const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
 
-    const customStylesToManage = (["font-size"]);
+    const customStylesToManage = (["font-size", "color"]);
+    
+    // eslint-disable-next-line no-unused-vars
     const { styles, customStyleFn, exporter } = createStyles(customStylesToManage, "CUSTOM_");
 
     React.useEffect(() => {

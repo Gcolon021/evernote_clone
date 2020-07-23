@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from "src/styledComponents/main/draftRichTextEditor/FontSizeDropDown";
+import Checked from "src/resources/TextEditor/check_fontsize.png";
 
 const FontSizeMenu = ({ handleOnChange, editorState, styles }) => {
     const [selectedFontSize, setSelectedFontSize] = React.useState(14);
@@ -23,7 +24,7 @@ const FontSizeMenu = ({ handleOnChange, editorState, styles }) => {
         >
         <S.MenuItemValue>
           {fontSize}
-          {/* TODO add check here if selected */}
+          { fontSize === selectedFontSize ? <div style={{backgroundImage:`url(${Checked})`}} /> : null }
         </S.MenuItemValue>
       </S.MenuItemBtn>
     ));

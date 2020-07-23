@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from "src/styledComponents/main/draftRichTextEditor/BlockStyleButton";
 
-const BlockStyleButton = ({ onClick, image}) => {
+const BlockStyleButton = ({ onClick, image, style}) => {
     return (
         <S.CustomButton
             onMouseDown={e => e.preventDefault()}
             onClick={onClick}
-            style={{backgroundImage:`url(${image})`}}
+            style={{backgroundImage:`url(${image})`, ...style}}
         />
     )
 }

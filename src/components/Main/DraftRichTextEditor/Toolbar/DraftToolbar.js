@@ -7,6 +7,7 @@ import Underline from "src/resources/TextEditor/underline.png";
 import Bold from "src/resources/TextEditor/bold.png";
 import Italics from "src/resources/TextEditor/italic.png"
 import Strike from "src/resources/TextEditor/strikethrough.png";
+import ColorPicker from "./ColorPicker";
 import 'draft-js/dist/Draft.css'
 
 const DraftToolBar = ({ editorState, handleOnChange, styles }) => {
@@ -24,6 +25,7 @@ const DraftToolBar = ({ editorState, handleOnChange, styles }) => {
               <FontSizeMenu handleOnChange={handleOnChange} editorState={editorState} styles={styles} />
             </S.ItemCon>
               <S.Divider />
+                <ColorPicker handleOnChange={handleOnChange} editorState={editorState} styles={styles} />
                 <BlockStyleButton image={Bold} onClick={() => handleInLineStyle('BOLD')} />
                 <BlockStyleButton image={Italics} onClick={() => handleInLineStyle('ITALIC')} />
                 <BlockStyleButton image={Underline} onClick={() => handleInLineStyle('UNDERLINE')} />
